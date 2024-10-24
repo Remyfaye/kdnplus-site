@@ -15,7 +15,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [isInfo, setIsInfo] = useState(true);
+  const [isInfo, setIsInfo] = useState(false);
   const item = tvSeries[0];
 
   // useEffect(() => {
