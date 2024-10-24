@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(180, 165, 26, 0) 40.66%,
+    #0a0a0ad5 63.53%,
+    #0a0a0a 90.85%
+  );
+}
+.bg-gradient {
+  background: linear-gradient(
+    42.84deg,
+    rgba(0, 0, 0, 0.3) 33.4%,
+    rgba(0, 0, 0, 0.18) 43.64%,
+    rgba(255, 255, 255, 0) 66.02%
+  );
+}
+
+.info-gradient {
+  background: linear-gradient(180deg, #00000000 60.18%, #2e2e2e 96.73%);
+  /* linear-gradient(204deg, rgba(46, 46, 46, 0) 53.69%, #2e2e2e 79.1%); */
+}
+
+.invisible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.account-gradient {
+  background: 
+  /* linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), */ linear-gradient(
+      260.99deg,
+      #a31c2c -20.31%,
+      rgba(0, 0, 0, 0.6) 38.62%,
+      #000000 103.11%
+    ),
+    linear-gradient(131.83deg, rgba(163, 28, 88, 0) 85.88%, #a31c58 111.79%);
+}
+
+.check-grid2 {
+  /* Gradient background */
+  background-image: linear-gradient(
+      260.99deg,
+      #a31c2c -20.31%,
+      /* Dark red */ #0f0e0e75 38.62%,
+      /* Semi-transparent black */ #141313b6 103.11% /* Solid black */
+    ),
+    /* More visible grid lines */
+      linear-gradient(90deg, #000000 5px, transparent 1px); /* Vertical lines */
+  /*   */
+
+  /* grid size to match the closer lines in the image */
+  background-size: cover,
+    /* The gradient fills the entire background */ 60px 60px; /* Grid size for closer spacing */
+
+  /* Normal blending of layers */
+  background-blend-mode: normal;
+}
+
+.check-grid {
+  /* Gradient background */
+  background-image: url("/assets/bimg.png"),
+    /* Grid line image */
+      linear-gradient(
+        260.99deg,
+        #a31c2c -20.31%,
+        rgba(43, 42, 42, 0.164) 38.62%,
+        #1f1f1f2a 103.11%
+      );
+
+  /* image and gradient cover of whole area */
+  background-size: /* for image to fit well */ cover; /* Gradient fills the background */
+
+  /* Positioning */
+  background-position: center, center;
+
+  /* Normal blending of layers */
+  background-blend-mode: normal;
+}
+
+.info-scrollbar::-webkit-scrollbar {
+  @apply w-[4px] bg-gray-200 rounded-2xl mx-5 text-red-400;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
